@@ -28,6 +28,13 @@ const experience = [
   { company: "Indusparquet", role: "Encargada de Diseño & Marketing", years: "2011 — 2013", description: "Piezas gráficas institucionales y material promocional." },
 ];
 
+const works = [
+  { title: "Country & Co.", category: "Identidad", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
+  { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
+  { title: "Bodas del Sur", category: "Print", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
+  { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
+];
+
 const tools = ["Illustrator", "Photoshop", "InDesign", "Canva", "Google Workspace", "Claude", "ChatGPT", "Gemini"];
 const languages = [
   { name: "Español", level: "Nativo" },
