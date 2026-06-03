@@ -54,6 +54,7 @@ function Portfolio() {
           </a>
           <ul className="hidden md:flex items-center gap-10 text-xs tracking-[0.18em] uppercase text-muted-foreground">
             <li><a href="#about" className="hover:text-brown-500 transition-colors">Sobre mí</a></li>
+            <li><a href="#trabajos" className="hover:text-brown-500 transition-colors">Trabajos</a></li>
             <li><a href="#experience" className="hover:text-brown-500 transition-colors">Experiencia</a></li>
             <li><a href="#tools" className="hover:text-brown-500 transition-colors">Herramientas</a></li>
             <li><a href="#contact" className="hover:text-brown-500 transition-colors">Contacto</a></li>
