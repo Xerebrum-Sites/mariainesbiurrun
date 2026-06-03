@@ -92,43 +92,45 @@ function Portfolio() {
 
       {/* About */}
       <section id="about" className="py-24 lg:py-32 bg-nude-50 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div className="lg:col-span-4">
-            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-6">— Perfil</p>
-            <div className="relative w-48 lg:w-full max-w-[280px] aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-nude-100">
-              <img
-                src={headshot}
-                alt="Retrato de Inés Biurrun, diseñadora gráfica"
-                width={560}
-                height={700}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-7 lg:col-start-6 space-y-6">
-            <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
-              Inés Biurrun, diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
-            </h2>
-            <p className="text-lg font-light leading-relaxed text-foreground/80">
-              Especialista en contenido para redes sociales, material impreso y
-              diseño web. Combino el dominio técnico de Adobe Suite con
-              herramientas de IA contemporáneas para entregar piezas con
-              coherencia de marca y mirada editorial.
-            </p>
-            <p className="text-lg font-light leading-relaxed text-foreground/80">
-              Experiencia en gestión de contenido digital, cobertura de eventos
-              y dirección creativa — siempre buscando equilibrio entre la elegancia
-              visual y la claridad del mensaje.
-            </p>
-            <div className="pt-8 grid grid-cols-2 gap-8 border-t border-border">
-              <div>
-                <p className="font-display text-3xl text-brown-500 font-light">10+</p>
-                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Años en diseño</p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-8">— Perfil</p>
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+            <div className="shrink-0 w-44 sm:w-52 md:w-56 lg:w-64">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-nude-100">
+                <img
+                  src={headshot}
+                  alt="Retrato de Inés Biurrun, diseñadora gráfica"
+                  width={560}
+                  height={700}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div>
-                <p className="font-display text-3xl text-brown-500 font-light">40+</p>
-                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Marcas & proyectos</p>
+            </div>
+            <div className="flex-1 space-y-6">
+              <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
+                Inés Biurrun, diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
+              </h2>
+              <p className="text-lg font-light leading-relaxed text-foreground/80">
+                Especialista en contenido para redes sociales, material impreso y
+                diseño web. Combino el dominio técnico de Adobe Suite con
+                herramientas de IA contemporáneas para entregar piezas con
+                coherencia de marca y mirada editorial.
+              </p>
+              <p className="text-lg font-light leading-relaxed text-foreground/80">
+                Experiencia en gestión de contenido digital, cobertura de eventos
+                y dirección creativa — siempre buscando equilibrio entre la elegancia
+                visual y la claridad del mensaje.
+              </p>
+              <div className="pt-8 grid grid-cols-2 gap-8 border-t border-border">
+                <div>
+                  <p className="font-display text-3xl text-brown-500 font-light">10+</p>
+                  <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Años en diseño</p>
+                </div>
+                <div>
+                  <p className="font-display text-3xl text-brown-500 font-light">40+</p>
+                  <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Marcas & proyectos</p>
+                </div>
               </div>
             </div>
           </div>
