@@ -19,6 +19,16 @@
  */
 
 @theme inline {
+  --font-sans: var(--font-text);
+  --font-display: var(--font-display);
+  --color-nude-50: var(--nude-50);
+  --color-nude-100: var(--nude-100);
+  --color-nude-200: var(--nude-200);
+  --color-nude-300: var(--nude-300);
+  --color-brown-400: var(--brown-400);
+  --color-brown-500: var(--brown-500);
+  --color-brown-700: var(--brown-700);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
