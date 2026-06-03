@@ -51,48 +51,28 @@ function Portfolio() {
       </nav>
 
       {/* Hero */}
-      <header id="top" className="pt-36 pb-24 lg:pt-44 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-7 order-2 lg:order-1">
-            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-8">
-              Portfolio · 2026
+      <header id="top" className="pt-36 pb-20 lg:pt-44 lg:pb-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-8">
+            Portfolio · 2026
+          </p>
+          <h1 className="font-display font-extralight text-[clamp(3.5rem,12vw,11rem)] leading-[0.92] tracking-[-0.04em] text-brown-700">
+            Inés <span className="italic font-light text-brown-500">Biurrun</span>
+          </h1>
+          <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <p className="max-w-lg text-base font-light leading-relaxed text-muted-foreground">
+              Diseñadora gráfica & comunicación visual — Rosario, Argentina.
             </p>
-            <h1 className="font-display font-extralight text-[clamp(3rem,8vw,7.5rem)] leading-[0.95] tracking-[-0.03em] text-brown-700">
-              Inés<br />
-              <span className="italic font-light text-brown-500">Biurrun</span>
-            </h1>
-            <p className="mt-10 max-w-xl text-lg font-light leading-relaxed text-muted-foreground">
-              Diseñadora gráfica con más de una década creando identidades visuales,
-              contenido digital y experiencias de marca con sensibilidad editorial
-              y precisión estética.
-            </p>
-            <div className="mt-12 flex items-center gap-8">
+            <div className="flex items-center gap-8">
               <a
-                href="#contact"
+                href="#trabajos"
                 className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-brown-500 text-primary-foreground text-xs tracking-[0.2em] uppercase hover:bg-brown-700 transition-colors"
               >
-                Trabajemos juntas
+                Ver trabajos
               </a>
-              <a href="#experience" className="text-xs tracking-[0.2em] uppercase text-brown-500 border-b border-brown-400 pb-1 hover:text-brown-700 transition-colors">
-                Ver experiencia
+              <a href="#contact" className="text-xs tracking-[0.2em] uppercase text-brown-500 border-b border-brown-400 pb-1 hover:text-brown-700 transition-colors">
+                Contacto
               </a>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 order-1 lg:order-2 relative">
-            <div className="absolute -inset-4 bg-nude-100 rounded-full blur-3xl opacity-60" aria-hidden />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-nude-100">
-              <img
-                src={headshot}
-                alt="Retrato de Inés Biurrun, diseñadora gráfica"
-                width={896}
-                height={1152}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-background border border-border rounded-2xl px-5 py-4 shadow-sm">
-              <p className="font-display text-3xl text-brown-500 leading-none">10<span className="text-brown-400">+</span></p>
-              <p className="text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground mt-1">años de experiencia</p>
             </div>
           </div>
         </div>
@@ -100,21 +80,31 @@ function Portfolio() {
 
       {/* About */}
       <section id="about" className="py-24 lg:py-32 bg-nude-50 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-4">
-            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-4">— Perfil</p>
-            <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700 leading-tight">
-              Diseño que comunica con intención.
-            </h2>
+            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-6">— Perfil</p>
+            <div className="relative w-48 lg:w-full max-w-[280px] aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-nude-100">
+              <img
+                src={headshot}
+                alt="Retrato de Inés Biurrun, diseñadora gráfica"
+                width={560}
+                height={700}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 space-y-6 text-lg font-light leading-relaxed text-foreground/80">
-            <p>
-              Especialista en crear contenido para redes sociales, material impreso
-              y diseño web. Combino el dominio técnico de Adobe Suite con
-              herramientas de IA contemporáneas para entregar piezas con coherencia
-              de marca y mirada editorial.
+          <div className="lg:col-span-7 lg:col-start-6 space-y-6">
+            <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
+              Inés Biurrun, diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
+            </h2>
+            <p className="text-lg font-light leading-relaxed text-foreground/80">
+              Especialista en contenido para redes sociales, material impreso y
+              diseño web. Combino el dominio técnico de Adobe Suite con
+              herramientas de IA contemporáneas para entregar piezas con
+              coherencia de marca y mirada editorial.
             </p>
-            <p>
+            <p className="text-lg font-light leading-relaxed text-foreground/80">
               Experiencia en gestión de contenido digital, cobertura de eventos
               y dirección creativa — siempre buscando equilibrio entre la elegancia
               visual y la claridad del mensaje.
@@ -132,6 +122,49 @@ function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* Trabajos */}
+      <section id="trabajos" className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-end justify-between mb-16">
+            <div>
+              <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-4">— Selección</p>
+              <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700">
+                Trabajos
+              </h2>
+            </div>
+            <p className="hidden md:block text-sm text-muted-foreground font-light">
+              Proyectos recientes
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-16 lg:gap-y-20">
+            {works.map((w) => (
+              <article key={w.title} className="group">
+                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-nude-100 mb-5">
+                  <img
+                    src={w.image}
+                    alt={w.title}
+                    width={800}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="font-display text-2xl font-light text-brown-700">{w.title}</h3>
+                  <span className="text-xs tracking-[0.2em] uppercase text-brown-400 shrink-0">{w.category}</span>
+                </div>
+                <p className="mt-2 text-base font-light leading-relaxed text-muted-foreground">
+                  {w.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Experience */}
       <section id="experience" className="py-24 lg:py-32">
