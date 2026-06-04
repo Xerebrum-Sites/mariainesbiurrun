@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import headshot from "@/assets/headshot.jpg";
 import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
@@ -29,11 +30,14 @@ const experience = [
 ];
 
 const works = [
-  { title: "Country & Co.", category: "Identidad", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
+  { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
   { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
-  { title: "Bodas del Sur", category: "Print", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
-  { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
+  { title: "Bodas del Sur", category: "Material Impreso", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
+  { title: "Revista Mantra", category: "Material Impreso", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
+  { title: "Campaña Verano", category: "Marketing Digital", image: work2, description: "Campaña integral de email marketing y social ads para lanzamiento estacional, con piezas adaptadas a múltiples formatos." },
 ];
+
+const workCategories = ["Todos", "Redes Sociales", "Branding", "Material Impreso", "Marketing Digital"];
 
 const toolCategories = [
   { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
@@ -50,6 +54,9 @@ const languages = [
 ];
 
 function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState("Todos");
+  const filteredWorks = activeCategory === "Todos" ? works : works.filter((w) => w.category === activeCategory);
+
   return (
     <div className="min-h-screen bg-background font-sans text-foreground antialiased">
       {/* Nav */}
@@ -150,20 +157,37 @@ function Portfolio() {
       {/* Trabajos */}
       <section id="trabajos" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-end justify-between mb-16">
-            <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-4">— Selección</p>
-              <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700">
-                Trabajos
-              </h2>
-            </div>
-            <p className="hidden md:block text-sm text-muted-foreground font-light">
-              Proyectos recientes
+          <div className="text-center mb-10">
+            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-4">— Selección</p>
+            <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700">
+              Trabajos Realizados
+            </h2>
+            <p className="mt-5 max-w-xl mx-auto text-base font-light text-muted-foreground">
+              Una selección de proyectos que reflejan mi experiencia en diseño gráfico y comunicación visual.
             </p>
           </div>
 
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
+            {workCategories.map((cat) => {
+              const active = cat === activeCategory;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2.5 rounded-full text-sm transition-colors border ${
+                    active
+                      ? "bg-brown-700 text-primary-foreground border-brown-700"
+                      : "bg-background text-brown-500 border-brown-400/40 hover:bg-nude-100"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
+
           <div className="grid sm:grid-cols-2 gap-x-8 gap-y-16 lg:gap-y-20">
-            {works.map((w) => (
+            {filteredWorks.map((w) => (
               <article key={w.title} className="group">
                 <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-nude-100 mb-5">
                   <img
