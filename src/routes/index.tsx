@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const experience = [
-  { company: "Grupo Gamma", role: "Diseñadora de Contenido — Comunicación Digital", years: "2025 — Presente", description: "Diseño de contenido visual, gestión de redes sociales, cobertura de eventos, actualización de sitio web y edición de piezas gráficas. Coordinación integral de comunicación digital." },
+  { company: "Grupo Gamma", role: "Coordinadora de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Coordinación integral de ateneos y jornadas médicas, gestión de contenidos y sitio web institucional, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
   { company: "The Stamp Factory", role: "Fundadora & Directora Creativa", years: "2020 — Presente", description: "Diseño de contenido para redes sociales, creación de flyers e invitaciones, banners y material visual. Gestión de identidad visual y consistencia de marca en todos los soportes." },
   { company: "Freelance", role: "Diseño Gráfico & Comunicación Visual", years: "2009 — Presente", description: "Diseño de contenido para redes sociales, piezas gráficas para publicidad online y offline, material impreso, adaptación de diseños a diferentes formatos." },
   { company: "Muy Churito", role: "Fundadora & Diseñadora", years: "2018 — 2020", description: "Diseño y producción integral de eventos, identidad visual." },
@@ -35,7 +35,7 @@ const works = [
   { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
 ];
 
-const tools = ["Illustrator", "Photoshop", "InDesign", "Canva", "Google Workspace", "Claude", "ChatGPT", "Gemini"];
+const tools = ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva", "Google Analytics", "Email Marketing", "Social Ads", "Marketing Digital", "Google Workspace", "Claude", "ChatGPT", "Gemini"];
 const languages = [
   { name: "Español", level: "Nativo" },
   { name: "Inglés", level: "Avanzado" },
@@ -109,7 +109,7 @@ function Portfolio() {
             </div>
             <div className="flex-1 space-y-6">
               <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
-                Inés Biurrun, diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
+                Diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
               </h2>
               <p className="text-lg font-light leading-relaxed text-foreground/80">
                 Especialista en contenido para redes sociales, material impreso y
