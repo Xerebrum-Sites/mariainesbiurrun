@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const experience = [
-  { company: "Grupo Gamma", role: "Coordinadora de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Coordinación integral de ateneos y jornadas médicas, gestión de contenidos y sitio web institucional, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
+  { company: "Grupo Gamma", role: "Asistente de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Asistente integral de ateneos, jornadas y eventos médicos: gestión de contenidos, actualización del sitio web institucional, coordinación con agencia, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
   { company: "The Stamp Factory", role: "Fundadora & Directora Creativa", years: "2020 — Presente", description: "Diseño de contenido para redes sociales, creación de flyers e invitaciones, banners y material visual. Gestión de identidad visual y consistencia de marca en todos los soportes." },
   { company: "Freelance", role: "Diseño Gráfico & Comunicación Visual", years: "2009 — Presente", description: "Diseño de contenido para redes sociales, piezas gráficas para publicidad online y offline, material impreso, adaptación de diseños a diferentes formatos." },
   { company: "Muy Churito", role: "Fundadora & Diseñadora", years: "2018 — 2020", description: "Diseño y producción integral de eventos, identidad visual." },
