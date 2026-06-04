@@ -35,7 +35,13 @@ const works = [
   { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
 ];
 
-const tools = ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva", "Google Analytics", "Email Marketing", "Social Ads", "Marketing Digital", "Google Workspace", "Claude", "ChatGPT", "Gemini"];
+const toolCategories = [
+  { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
+  { title: "Technical Skills", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
+  { title: "Digital Tools", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
+  { title: "Platforms & Tools", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
+];
+const expertise = ["Marketing Digital", "Email Marketing", "Social Ads", "Comunicación Visual", "Dirección Creativa", "Gestión de Redes Sociales"];
 const languages = [
   { name: "Español", level: "Nativo" },
   { name: "Inglés", level: "Avanzado" },
