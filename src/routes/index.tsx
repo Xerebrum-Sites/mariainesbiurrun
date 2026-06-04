@@ -109,7 +109,7 @@ function Portfolio() {
             </div>
             <div className="flex-1 space-y-6">
               <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
-                Inés Biurrun, diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
+                Diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
               </h2>
               <p className="text-lg font-light leading-relaxed text-foreground/80">
                 Especialista en contenido para redes sociales, material impreso y
