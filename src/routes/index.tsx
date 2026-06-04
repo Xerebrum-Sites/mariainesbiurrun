@@ -30,11 +30,14 @@ const experience = [
 ];
 
 const works = [
-  { title: "Country & Co.", category: "Identidad", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
+  { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
   { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
-  { title: "Bodas del Sur", category: "Print", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
-  { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
+  { title: "Bodas del Sur", category: "Material Impreso", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
+  { title: "Revista Mantra", category: "Material Impreso", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
+  { title: "Campaña Verano", category: "Marketing Digital", image: work2, description: "Campaña integral de email marketing y social ads para lanzamiento estacional, con piezas adaptadas a múltiples formatos." },
 ];
+
+const workCategories = ["Todos", "Redes Sociales", "Branding", "Material Impreso", "Marketing Digital"];
 
 const toolCategories = [
   { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
