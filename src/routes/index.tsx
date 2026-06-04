@@ -54,6 +54,9 @@ const languages = [
 ];
 
 function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState("Todos");
+  const filteredWorks = activeCategory === "Todos" ? works : works.filter((w) => w.category === activeCategory);
+
   return (
     <div className="min-h-screen bg-background font-sans text-foreground antialiased">
       {/* Nav */}
