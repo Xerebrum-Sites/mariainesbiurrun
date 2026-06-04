@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const experience = [
-  { company: "Grupo Gamma", role: "Coordinadora de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Coordinación integral de ateneos y jornadas médicas, gestión de contenidos y sitio web institucional, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
+  { company: "Grupo Gamma", role: "Asistente de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Asistente integral de ateneos, jornadas y eventos médicos: gestión de contenidos, actualización del sitio web institucional, coordinación con agencia, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
   { company: "The Stamp Factory", role: "Fundadora & Directora Creativa", years: "2020 — Presente", description: "Diseño de contenido para redes sociales, creación de flyers e invitaciones, banners y material visual. Gestión de identidad visual y consistencia de marca en todos los soportes." },
   { company: "Freelance", role: "Diseño Gráfico & Comunicación Visual", years: "2009 — Presente", description: "Diseño de contenido para redes sociales, piezas gráficas para publicidad online y offline, material impreso, adaptación de diseños a diferentes formatos." },
   { company: "Muy Churito", role: "Fundadora & Diseñadora", years: "2018 — 2020", description: "Diseño y producción integral de eventos, identidad visual." },
@@ -35,7 +35,13 @@ const works = [
   { title: "Revista Mantra", category: "Editorial", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
 ];
 
-const tools = ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva", "Google Analytics", "Email Marketing", "Social Ads", "Marketing Digital", "Google Workspace", "Claude", "ChatGPT", "Gemini"];
+const toolCategories = [
+  { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
+  { title: "Technical Skills", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
+  { title: "Digital Tools", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
+  { title: "Platforms & Tools", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
+];
+const expertise = ["Marketing Digital", "Email Marketing", "Social Ads", "Comunicación Visual", "Dirección Creativa", "Gestión de Redes Sociales"];
 const languages = [
   { name: "Español", level: "Nativo" },
   { name: "Inglés", level: "Avanzado" },
@@ -222,18 +228,39 @@ function Portfolio() {
             <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700 mb-10">
               Herramientas
             </h2>
-            <div className="flex flex-wrap gap-3">
-              {tools.map((t) => (
-                <span
-                  key={t}
-                  className="px-5 py-2.5 rounded-full border border-brown-400/40 text-sm text-brown-500 bg-background hover:bg-nude-100 transition-colors"
-                >
-                  {t}
-                </span>
+            <div className="space-y-8">
+              {toolCategories.map((cat) => (
+                <div key={cat.title}>
+                  <p className="text-xs tracking-[0.2em] uppercase text-brown-400 mb-3">{cat.title}</p>
+                  <div className="flex flex-wrap gap-2.5">
+                    {cat.items.map((t) => (
+                      <span
+                        key={t}
+                        className="px-4 py-2 rounded-full border border-brown-400/40 text-sm text-brown-500 bg-background hover:bg-nude-100 transition-colors"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
 
-            <div className="mt-16">
+            <div className="mt-12">
+              <p className="text-xs tracking-[0.2em] uppercase text-brown-400 mb-3">Expertise</p>
+              <div className="flex flex-wrap gap-2.5">
+                {expertise.map((e) => (
+                  <span
+                    key={e}
+                    className="px-4 py-2 rounded-full bg-brown-500 text-primary-foreground text-sm hover:bg-brown-700 transition-colors"
+                  >
+                    {e}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12">
               <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-6">— Idiomas</p>
               <ul className="space-y-3">
                 {languages.map((l) => (
