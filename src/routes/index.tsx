@@ -115,18 +115,22 @@ function Portfolio() {
             </div>
             <div className="flex-1 space-y-6">
               <h2 className="font-display font-light text-3xl lg:text-4xl tracking-tight text-brown-700 leading-tight">
-                Diseñadora gráfica con más de una década creando identidades visuales y experiencias de marca.
+                Diseñadora gráfica con más de 10 años de experiencia creando identidades visuales, contenidos digitales y experiencias de marca.
               </h2>
               <p className="text-lg font-light leading-relaxed text-foreground/80">
-                Especialista en contenido para redes sociales, material impreso y
-                diseño web. Combino el dominio técnico de Adobe Suite con
-                herramientas de IA contemporáneas para entregar piezas con
-                coherencia de marca y mirada editorial.
+                Especializada en comunicación visual para entornos corporativos
+                y de salud, desarrollo contenido para redes sociales, piezas
+                editoriales, material impreso y plataformas digitales. Combino
+                un sólido dominio de Adobe Creative Suite con herramientas de
+                inteligencia artificial para optimizar procesos creativos y
+                potenciar resultados.
               </p>
               <p className="text-lg font-light leading-relaxed text-foreground/80">
-                Experiencia en gestión de contenido digital, cobertura de eventos
-                y dirección creativa — siempre buscando equilibrio entre la elegancia
-                visual y la claridad del mensaje.
+                Cuento con experiencia en gestión de contenido digital,
+                coordinación y cobertura de eventos, comunicación institucional
+                y dirección creativa, siempre enfocada en construir mensajes
+                claros, visualmente atractivos y alineados con los objetivos de
+                cada marca.
               </p>
               <div className="pt-8 grid grid-cols-2 gap-8 border-t border-border">
                 <div>
