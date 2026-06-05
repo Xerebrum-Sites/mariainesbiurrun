@@ -19,15 +19,16 @@ export const Route = createFileRoute("/")({
 });
 
 const experience = [
-  { company: "Grupo Gamma", role: "Asistente de Comunicación & Eventos Médicos", years: "2025 — Presente", description: "Asistente integral de ateneos, jornadas y eventos médicos: gestión de contenidos, actualización del sitio web institucional, coordinación con agencia, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo a profesionales en actividades académicas y científicas." },
-  { company: "The Stamp Factory", role: "Fundadora & Directora Creativa", years: "2020 — Presente", description: "Diseño de contenido para redes sociales, creación de flyers e invitaciones, banners y material visual. Gestión de identidad visual y consistencia de marca en todos los soportes." },
-  { company: "Freelance", role: "Diseño Gráfico & Comunicación Visual", years: "2009 — Presente", description: "Diseño de contenido para redes sociales, piezas gráficas para publicidad online y offline, material impreso, adaptación de diseños a diferentes formatos." },
-  { company: "Muy Churito", role: "Fundadora & Diseñadora", years: "2018 — 2020", description: "Diseño y producción integral de eventos, identidad visual." },
-  { company: "Isadora", role: "Visual Merchandiser", years: "Feb — May 2018", description: "Diseño de vidrieras y exhibición de productos." },
-  { company: "Grupo Emerger", role: "Asistente de Diseño Gráfico", years: "2017", description: "Producción de piezas gráficas institucionales." },
-  { company: "John Deere Argentina", role: "Asistente Audiovisual", years: "2014 — 2015", description: "Gráficas institucionales y materiales de presentación." },
-  { company: "Indusparquet", role: "Encargada de Diseño & Marketing", years: "2011 — 2013", description: "Piezas gráficas institucionales y material promocional." },
+  { company: "Grupo Gamma", role: "Asistente de Comunicación", years: "2025 — Presente", description: "Gestión de contenidos para ateneos, jornadas y eventos médicos. Actualización del sitio institucional, coordinación con agencia, redes sociales (LinkedIn, Facebook, Instagram), cobertura fotográfica y audiovisual, y soporte operativo en actividades académicas y científicas." },
+  { company: "The Stamp Factory", role: "Fundadora & Directora Creativa", years: "2020 — Presente", description: "Dirección creativa y diseño de producto. Contenido visual para redes (posts, stories, carruseles, campañas), piezas gráficas, material para plataformas digitales y gestión de identidad visual con foco en consistencia de marca." },
+  { company: "Diseñadora Freelance", role: "Diseño Gráfico & Comunicación Visual", years: "2009 — Presente", description: "Proyectos de diseño para diversas marcas: contenido para redes y marketing digital, piezas para publicidad online y offline, material impreso y adaptación a múltiples formatos." },
+  { company: "Muy Churito", role: "Fundadora & Diseñadora Gráfica", years: "2017 — 2023", description: "Diseño y producción integral de eventos: identidad visual, piezas personalizadas y dirección estética de ambientaciones para eventos corporativos y privados." },
+  { company: "Isadora", role: "In Store Visual Merchandiser", years: "Feb — Jun 2018", description: "Diseño de vidrieras, exhibición de productos y cuidado de la estética en punto de venta." },
+  { company: "Grupo Emerger", role: "Asistente de Diseño Gráfico", years: "Abr — May 2017", description: "Diseño de piezas gráficas institucionales y soporte en comunicación visual." },
+  { company: "John Deere Argentina", role: "Asistente de Producción Audiovisual", years: "2014 — 2015", description: "Contenido gráfico y audiovisual institucional, edición de piezas y asistencia en ferias y eventos corporativos." },
+  { company: "Indusparquet", role: "Encargada de Marketing & Diseño", years: "2011 — 2013", description: "Diseño de piezas gráficas para comunicación de marca y soporte en acciones de marketing." },
 ];
+
 
 const works = [
   { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
