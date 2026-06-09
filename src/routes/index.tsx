@@ -5,6 +5,10 @@ import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
+import manualIdentidadCover from "@/assets/manual-identidad-cover.jpg.asset.json";
+import manualMarcaCover from "@/assets/manual-marca-cover.jpg.asset.json";
+import manualIdentidadPdf from "@/assets/manual-identidad.pdf.asset.json";
+import manualMarcaPdf from "@/assets/manual-marca.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
