@@ -5,6 +5,10 @@ import work1 from "@/assets/work-1.jpg";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
+import manualIdentidadCover from "@/assets/manual-identidad-cover.jpg.asset.json";
+import manualMarcaCover from "@/assets/manual-marca-cover.jpg.asset.json";
+import manualIdentidadPdf from "@/assets/manual-identidad.pdf.asset.json";
+import manualMarcaPdf from "@/assets/manual-marca.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,6 +35,8 @@ const experience = [
 
 
 const works = [
+  { title: "Manual de Identidad Visual", category: "Branding", image: manualIdentidadCover.url, description: "Manual de identidad visual: construcción de marca, sistema de logotipo, paleta cromática, tipografías y usos correctos.", pdf: manualIdentidadPdf.url },
+  { title: "Manual de Marca", category: "Branding", image: manualMarcaCover.url, description: "Manual de marca completo con lineamientos de aplicación, tono de comunicación y piezas gráficas de referencia.", pdf: manualMarcaPdf.url },
   { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
   { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
   { title: "Bodas del Sur", category: "Material Impreso", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
@@ -207,6 +213,16 @@ function Portfolio() {
                 <p className="mt-2 text-base font-light leading-relaxed text-muted-foreground">
                   {w.description}
                 </p>
+                {w.pdf && (
+                  <a
+                    href={w.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-brown-500 border-b border-brown-400 pb-1 hover:text-brown-700 transition-colors"
+                  >
+                    Ver PDF →
+                  </a>
+                )}
               </article>
             ))}
           </div>
