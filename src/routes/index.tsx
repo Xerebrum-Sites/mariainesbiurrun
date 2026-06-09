@@ -35,6 +35,8 @@ const experience = [
 
 
 const works = [
+  { title: "Manual de Identidad Visual", category: "Branding", image: manualIdentidadCover.url, description: "Manual de identidad visual: construcción de marca, sistema de logotipo, paleta cromática, tipografías y usos correctos.", pdf: manualIdentidadPdf.url },
+  { title: "Manual de Marca", category: "Branding", image: manualMarcaCover.url, description: "Manual de marca completo con lineamientos de aplicación, tono de comunicación y piezas gráficas de referencia.", pdf: manualMarcaPdf.url },
   { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
   { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
   { title: "Bodas del Sur", category: "Material Impreso", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
