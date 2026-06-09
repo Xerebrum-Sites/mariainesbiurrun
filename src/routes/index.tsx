@@ -213,6 +213,16 @@ function Portfolio() {
                 <p className="mt-2 text-base font-light leading-relaxed text-muted-foreground">
                   {w.description}
                 </p>
+                {w.pdf && (
+                  <a
+                    href={w.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-brown-500 border-b border-brown-400 pb-1 hover:text-brown-700 transition-colors"
+                  >
+                    Ver PDF →
+                  </a>
+                )}
               </article>
             ))}
           </div>
