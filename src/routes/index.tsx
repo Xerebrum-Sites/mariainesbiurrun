@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import headshot from "@/assets/headshot.jpg";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
+import coverTsf from "@/assets/covers/tsf.png";
+import coverTbsa from "@/assets/covers/tbsa.png";
+import coverOnzas from "@/assets/covers/onzas.png";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +29,11 @@ const marcaModules = import.meta.glob("@/assets/marca/p-*.jpg", {
   import: "default",
   query: "?url",
 }) as Record<string, string>;
+const tsfModules = import.meta.glob("@/assets/tsf/p-*.jpg", {
+  eager: true,
+  import: "default",
+  query: "?url",
+}) as Record<string, string>;
 
 const sortPages = (mods: Record<string, string>) =>
   Object.keys(mods)
@@ -38,6 +42,7 @@ const sortPages = (mods: Record<string, string>) =>
 
 const identidadPages = sortPages(identidadModules);
 const marcaPages = sortPages(marcaModules);
+const tsfPages = sortPages(tsfModules);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,21 +71,39 @@ type Work = {
   title: string;
   category: string;
   image: string;
+  bg: string;
   description: string;
   pages?: string[];
 };
 
 const works: Work[] = [
-  { title: "Manual de Identidad Visual", category: "Branding", image: identidadPages[0], description: "Manual de identidad visual: construcción de marca, sistema de logotipo, paleta cromática, tipografías y usos correctos.", pages: identidadPages },
-  { title: "Manual de Marca", category: "Branding", image: marcaPages[0], description: "Manual de marca completo con lineamientos de aplicación, tono de comunicación y piezas gráficas de referencia.", pages: marcaPages },
-  { title: "Country & Co.", category: "Branding", image: work1, description: "Identidad visual y papelería para un estudio boutique. Sistema de marca minimalista con paleta nude y tipografía editorial." },
-  { title: "Atelier Lina", category: "Redes Sociales", image: work2, description: "Dirección creativa y contenido para feed de Instagram de una marca de moda femenina. Grilla cohesiva y narrativa visual." },
-  { title: "Bodas del Sur", category: "Material Impreso", image: work3, description: "Diseño de invitaciones y papelería para evento. Tipografía script combinada con sans neutra sobre papel de algodón." },
-  { title: "Revista Mantra", category: "Material Impreso", image: work4, description: "Diagramación de spread editorial para revista independiente. Jerarquía tipográfica y ritmo visual entre imagen y texto." },
-  { title: "Campaña Verano", category: "Marketing Digital", image: work2, description: "Campaña integral de email marketing y social ads para lanzamiento estacional, con piezas adaptadas a múltiples formatos." },
+  {
+    title: "The Stamp Factory",
+    category: "The Stamp Factory",
+    image: coverTsf,
+    bg: "#D88B53",
+    description: "Desarrollo y gestión de marca. Diseño de identidad visual, packaging, comunicación digital y estrategias de contenido.",
+    pages: tsfPages,
+  },
+  {
+    title: "TBSA",
+    category: "TBSA",
+    image: coverTbsa,
+    bg: "#000000",
+    description: "Diseño de identidad visual corporativa. Creación de sistema gráfico, lineamientos de marca y aplicaciones institucionales.",
+    pages: identidadPages,
+  },
+  {
+    title: "2 Onzas",
+    category: "2 Onzas",
+    image: coverOnzas,
+    bg: "#F5F5F3",
+    description: "Desarrollo de branding para empresa gastronómica. Construcción de identidad visual y aplicaciones de marca.",
+    pages: marcaPages,
+  },
 ];
 
-const workCategories = ["Todos", "Redes Sociales", "Branding", "Material Impreso", "Marketing Digital"];
+const workCategories = ["Todos", "The Stamp Factory", "TBSA", "2 Onzas"];
 
 const toolCategories = [
   { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
@@ -240,14 +263,17 @@ function Portfolio() {
                   onClick={hasPages ? () => setOpenWork(w) : undefined}
                   className={`group text-left w-full ${hasPages ? "cursor-pointer" : ""}`}
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-nude-100 mb-5">
+                  <div
+                    className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-5"
+                    style={{ backgroundColor: w.bg }}
+                  >
                     <img
                       src={w.image}
                       alt={w.title}
                       width={800}
                       height={1000}
                       loading="lazy"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                     />
                     {hasPages && (
                       <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-brown-700/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
