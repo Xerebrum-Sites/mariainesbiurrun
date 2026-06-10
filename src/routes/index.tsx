@@ -106,10 +106,10 @@ const works: Work[] = [
 const workCategories = ["Todos", "The Stamp Factory", "TBSA", "2 Onzas"];
 
 const toolCategories = [
-  { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
-  { title: "Technical Skills", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
-  { title: "Digital Tools", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
-  { title: "Platforms & Tools", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
+  { title: "Software", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
+  { title: "Habilidades Técnicas", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
+  { title: "Herramientas Digitales", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
+  { title: "Plataformas", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
 ];
 const expertise = ["Marketing Digital", "Email Marketing", "Social Ads", "Comunicación Visual", "Dirección Creativa", "Gestión de Redes Sociales"];
 const languages = [
@@ -422,10 +422,10 @@ function Portfolio() {
             <span className="italic text-brown-500">tu próximo proyecto.</span>
           </h2>
           <a
-            href="mailto:biurrunmariaines@gmail.com"
+            href="mailto:hola@mariainesbiurrun.com.ar"
             className="inline-block mt-12 font-display text-xl lg:text-2xl text-brown-500 border-b border-brown-400 pb-2 hover:text-brown-700 transition-colors"
           >
-            biurrunmariaines@gmail.com
+            hola@mariainesbiurrun.com.ar
           </a>
           <div className="mt-10 flex items-center justify-center gap-8 text-sm text-muted-foreground">
             <span>+54 341 260 4109</span>
