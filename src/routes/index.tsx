@@ -106,10 +106,10 @@ const works: Work[] = [
 const workCategories = ["Todos", "The Stamp Factory", "TBSA", "2 Onzas"];
 
 const toolCategories = [
-  { title: "Software Skills", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
-  { title: "Technical Skills", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
-  { title: "Digital Tools", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
-  { title: "Platforms & Tools", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
+  { title: "Software", items: ["Illustrator", "Photoshop", "InDesign", "Figma", "Canva"] },
+  { title: "Habilidades Técnicas", items: ["Diseño editorial", "Identidad visual", "Diagramación", "Retoque fotográfico", "Tipografía"] },
+  { title: "Herramientas Digitales", items: ["Claude", "ChatGPT", "Gemini", "Google Workspace"] },
+  { title: "Plataformas", items: ["Google Analytics", "Meta Business Suite", "LinkedIn", "Instagram", "Facebook"] },
 ];
 const expertise = ["Marketing Digital", "Email Marketing", "Social Ads", "Comunicación Visual", "Dirección Creativa", "Gestión de Redes Sociales"];
 const languages = [
@@ -346,26 +346,27 @@ function Portfolio() {
             <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700 mb-10">
               Herramientas
             </h2>
-            <div className="space-y-8">
-              {toolCategories.map((cat) => (
+            <div className="border border-border rounded-xl bg-background overflow-hidden">
+              {toolCategories.map((cat, catIdx) => (
                 <div key={cat.title}>
-                  <p className="text-xs tracking-[0.2em] uppercase text-brown-400 mb-3">{cat.title}</p>
-                  <div className="flex flex-wrap gap-2.5">
-                    {cat.items.map((t) => (
-                      <span
-                        key={t}
-                        className="px-4 py-2 rounded-full border border-brown-400/40 text-sm text-brown-500 bg-background hover:bg-nude-100 transition-colors"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <div className={`px-5 py-2.5 ${catIdx > 0 ? "border-t border-border" : ""}`}>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-brown-500 font-medium">{cat.title}</p>
                   </div>
+                  {cat.items.map((t, i) => (
+                    <div
+                      key={t}
+                      className={`px-5 py-3 flex items-center gap-3 ${i < cat.items.length - 1 ? "border-b border-border" : ""} ${catIdx < toolCategories.length - 1 && i === cat.items.length - 1 ? "border-b border-border" : ""}`}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-brown-400 shrink-0" />
+                      <span className="text-sm text-brown-700">{t}</span>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
 
             <div className="mt-12">
-              <p className="text-xs tracking-[0.2em] uppercase text-brown-400 mb-3">Expertise</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-brown-400 mb-3">Especialidades</p>
               <div className="flex flex-wrap gap-2.5">
                 {expertise.map((e) => (
                   <span
@@ -380,14 +381,17 @@ function Portfolio() {
 
             <div className="mt-12">
               <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-6">— Idiomas</p>
-              <ul className="space-y-3">
-                {languages.map((l) => (
-                  <li key={l.name} className="flex items-baseline justify-between border-b border-border pb-3">
-                    <span className="font-display text-lg text-brown-700">{l.name}</span>
+              <div className="border border-border rounded-xl bg-background overflow-hidden">
+                {languages.map((l, i) => (
+                  <div
+                    key={l.name}
+                    className={`px-5 py-3 flex items-baseline justify-between ${i < languages.length - 1 ? "border-b border-border" : ""}`}
+                  >
+                    <span className="font-display text-base text-brown-700">{l.name}</span>
                     <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">{l.level}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
@@ -422,10 +426,10 @@ function Portfolio() {
             <span className="italic text-brown-500">tu próximo proyecto.</span>
           </h2>
           <a
-            href="mailto:biurrunmariaines@gmail.com"
+            href="mailto:hola@mariainesbiurrun.com.ar"
             className="inline-block mt-12 font-display text-xl lg:text-2xl text-brown-500 border-b border-brown-400 pb-2 hover:text-brown-700 transition-colors"
           >
-            biurrunmariaines@gmail.com
+            hola@mariainesbiurrun.com.ar
           </a>
           <div className="mt-10 flex items-center justify-center gap-8 text-sm text-muted-foreground">
             <span>+54 341 260 4109</span>
