@@ -263,14 +263,17 @@ function Portfolio() {
                   onClick={hasPages ? () => setOpenWork(w) : undefined}
                   className={`group text-left w-full ${hasPages ? "cursor-pointer" : ""}`}
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-nude-100 mb-5">
+                  <div
+                    className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-5"
+                    style={{ backgroundColor: w.bg }}
+                  >
                     <img
                       src={w.image}
                       alt={w.title}
                       width={800}
                       height={1000}
                       loading="lazy"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                     />
                     {hasPages && (
                       <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-brown-700/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
