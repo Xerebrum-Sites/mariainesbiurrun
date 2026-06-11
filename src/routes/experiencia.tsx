@@ -47,6 +47,27 @@ function ExperiencePage() {
               </li>
             ))}
           </ol>
+
+          {/* Educación */}
+          <div className="mt-24 lg:mt-32">
+            <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-4">— Formación</p>
+            <h2 className="font-display font-light text-4xl lg:text-5xl tracking-tight text-brown-700 mb-12">
+              Educación
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              <div className="border-l-2 border-brown-400 pl-6">
+                <p className="text-xs tracking-[0.2em] uppercase text-brown-400">2004 — 2012</p>
+                <h3 className="font-display text-2xl font-light text-brown-700 mt-2">Licenciatura en Diseño Gráfico</h3>
+                <p className="text-sm text-muted-foreground mt-1 italic">UE Siglo 21, Córdoba</p>
+              </div>
+              <div className="border-l-2 border-nude-300 pl-6">
+                <p className="text-xs tracking-[0.2em] uppercase text-brown-400">2009</p>
+                <h3 className="font-display text-2xl font-light text-brown-700 mt-2">
+                  Diplomatura en Investigación de Mercados & Opinión Pública
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </SiteLayout>
