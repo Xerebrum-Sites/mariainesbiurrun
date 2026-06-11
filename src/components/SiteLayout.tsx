@@ -39,9 +39,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="flex-1 pt-20">{children}</main>
 
       <footer className="border-t border-border py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-[0.2em] uppercase text-muted-foreground">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center text-xs tracking-[0.2em] uppercase text-muted-foreground">
           <p>© 2026 Inés Biurrun</p>
-          <p>Diseñado & desarrollado con cuidado</p>
         </div>
       </footer>
     </div>
