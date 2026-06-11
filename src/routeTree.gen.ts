@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrabajosRouteImport } from './routes/trabajos'
 import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as HerramientasRouteImport } from './routes/herramientas'
 import { Route as ExperienciaRouteImport } from './routes/experiencia'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const TrabajosRoute = TrabajosRouteImport.update({
 const SobreMiRoute = SobreMiRouteImport.update({
   id: '/sobre-mi',
   path: '/sobre-mi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HerramientasRoute = HerramientasRouteImport.update({
+  id: '/herramientas',
+  path: '/herramientas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExperienciaRoute = ExperienciaRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/experiencia': typeof ExperienciaRoute
+  '/herramientas': typeof HerramientasRoute
   '/sobre-mi': typeof SobreMiRoute
   '/trabajos': typeof TrabajosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/experiencia': typeof ExperienciaRoute
+  '/herramientas': typeof HerramientasRoute
   '/sobre-mi': typeof SobreMiRoute
   '/trabajos': typeof TrabajosRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/experiencia': typeof ExperienciaRoute
+  '/herramientas': typeof HerramientasRoute
   '/sobre-mi': typeof SobreMiRoute
   '/trabajos': typeof TrabajosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/experiencia' | '/sobre-mi' | '/trabajos'
+  fullPaths: '/' | '/experiencia' | '/herramientas' | '/sobre-mi' | '/trabajos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experiencia' | '/sobre-mi' | '/trabajos'
-  id: '__root__' | '/' | '/experiencia' | '/sobre-mi' | '/trabajos'
+  to: '/' | '/experiencia' | '/herramientas' | '/sobre-mi' | '/trabajos'
+  id:
+    | '__root__'
+    | '/'
+    | '/experiencia'
+    | '/herramientas'
+    | '/sobre-mi'
+    | '/trabajos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ExperienciaRoute: typeof ExperienciaRoute
+  HerramientasRoute: typeof HerramientasRoute
   SobreMiRoute: typeof SobreMiRoute
   TrabajosRoute: typeof TrabajosRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre-mi'
       fullPath: '/sobre-mi'
       preLoaderRoute: typeof SobreMiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/herramientas': {
+      id: '/herramientas'
+      path: '/herramientas'
+      fullPath: '/herramientas'
+      preLoaderRoute: typeof HerramientasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experiencia': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ExperienciaRoute: ExperienciaRoute,
+  HerramientasRoute: HerramientasRoute,
   SobreMiRoute: SobreMiRoute,
   TrabajosRoute: TrabajosRoute,
 }
