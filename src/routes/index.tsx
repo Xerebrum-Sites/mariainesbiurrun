@@ -46,7 +46,7 @@ function HomePage() {
         </div>
       </header>
 
-      {/* Propuesta de valor */}
+      {/* Propuesta de valor · 2026 */}
       <section className="py-20 lg:py-28 bg-nude-50 border-y border-border">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <p className="text-xs tracking-[0.3em] uppercase text-brown-400 mb-6">— Propuesta de valor</p>
